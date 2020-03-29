@@ -1,3 +1,316 @@
 <!DOCTYPE html>
+<html>
+	<head> 
+		<title>TREES - video template</title>
+		<script type="text/javascript" src="jquery-2.2.0.min.js"></script>
+		<!-- last modified: jen nguyen, 20 feb 2016-->
+	</head>
+	
+	<style>
+		body {
+			font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+		}
 
-Hello World
+		h1 {
+			font-weight: 200;
+			letter-spacing: 10px;
+			color: #004d1b;
+			border: 5px solid #e5fff9;
+			padding: 20px;
+			padding-left: 40px;
+		}
+
+		h3 {
+			font-size: 20px;
+			font-weight: 200;
+			letter-spacing: 2px;
+		}
+
+		.header {
+			color: #008060;
+		}
+
+		.trees-greeting {
+			text-shadow : 0 0 0 #004d1b;
+		}
+
+
+		#template {
+			width: 55%;
+			padding-left: 25px;
+		}
+
+
+		#side-tips {
+			float: right;
+			background-color: #e5fff9;
+			border: 5px solid #e5fff9;
+			width: 38%;
+			overflow: auto;
+			padding: 20px;
+		}
+
+		#friend-infoz {
+			float: right;
+			clear: right;
+			border: 5px solid #e5fff9;
+			width: 38%;
+			overflow: auto;
+			padding: 20px;
+		}
+
+		.bold-bullet {
+			letter-spacing: 2.2px;
+			line-height: 30px;
+			color: #004d1b;
+		}
+
+		.examples {
+			padding-left: 20px;
+			color: #004d1b;
+		}
+
+		.ex-bullets {
+			padding-left: 40px;
+		}
+
+
+	</style>
+
+	<body>
+		<h1> Video formatting template </h1>
+		<br>
+
+
+
+		<!-- side box one: reminders while script writing -->
+
+		<div id="side-tips">
+			<p> <span class="trees-greeting">Hey, TREESies!</span> As you use this template to organize your script, please remember:</p>
+
+			<ul>
+				<li> These videos are 1-2 minutes!<br> Strive for concise clarity.</li>
+				<br>
+				<li> Interact with your audience!<br> Appeal to what is already intuitive with examples<br> or questions framed within an everyday context.</li>
+				<br>
+				<li> Prioritize the cleanliness of this structure...<br>
+					...but don't let it cramp your style!</li>
+				<br>
+				<li> Consider the visuals that will complement your words.<br>
+					Some things can be "said" using imagery. Use this to streamline your script!</li>
+				<br>
+				<li> Test your outline out on a friend!<br>
+				Practice talking about your topic even before you start outlining :) </li>
+			</ul>
+		</div>
+
+
+
+		<!-- side box two: reaching out to Jen, Judy, jRuby -->
+
+		<div id="friend-infoz">
+			<p> <span class="trees-greeting">Questions?</span> Some friends who would LOVE to brainstorm scripts with you:</p>
+
+			<ul>
+				<li> Ruby Fu  -  rubyfu [at] mit.edu</li>
+				<br>
+				<li> Jen Nguyen  -  jknguyen [at] mit.edu</li>
+			</ul>
+			<br>
+			<p> <span class="trees-greeting">Got a filled template or script?</span> We'd love to hear about it! </p>
+
+			<ul>
+				<li> Judy Yang  -  qjyang [at] mit.edu</li>
+			</ul>
+
+		</div>
+
+
+
+		<!-- main text: template content -->
+
+		<div id="template">
+
+			
+			<!-- step one: the question -->
+			<div id="the-question">
+				<h3> 1. <span class="header"> Present a motivating question </span> </h3>
+				<ul id ="step-one-points">
+					<li id="step-one-context"> Introduce the misconception / motivating statement </li>
+					<li id="step-one-misconcept"> Challenge it: is this statement true? </li>
+				</ul>
+
+				<ul class="examples"> Ex.
+					<div class="ex-bullets">
+						<li id="ex-context"> A smoggier sky is more polluted than a clearer one. </li>
+						<li id="ex-challenge"> It this 100% true? </li>
+					</div>
+				</ul>
+			</div>
+			<br>
+
+
+			<!-- step two: the science -->
+			<div id="the-science">
+				<h3> 2. <span class="header"> Explain the fundamental science </span> </h3>
+				<ul class="step-two-points">
+					<li id="step-two-science"> Describe the scientific concepts</li>
+					<li id="step-two-tip"> Limit this description to what is necessary to understand #3  </li>
+				</ul>
+
+				<ul class="examples"> Ex.
+					<div class="ex-bullets">
+						<li> Visual clarity depends on the light path between the object and your eye </li> 
+						<li> Particles scatter light, obscuring clarity </li>
+						<li> Light scatter is not just dependent on particle count, but other entities like composition and size </li>
+					</div>
+				</ul>
+			</div>
+			<br>
+
+
+			<!-- step three: tying back -->
+			<div id="the-merging">
+				<h3> 3. <span class="header"> Reconnect fundamentals with motivation </span> </h3>
+				<ul>
+					<li id="step-three-reconnect"> Return to the motivating question</li>
+					<li id="step-three-apply"> Directly apply fundamentals to tie it all together! </li>
+				</ul>
+
+				<ul class="examples"> Ex.
+					<div class="ex-bullets">
+						<li> The sky appears smoggier when there is more light scatter </li>
+						<li> Humidity can change particle composition and/or size, potentially changing how particles scatter light</li>
+						<li> Therefore, the same number of particles can produce different visibilities -- a smoggier sky doesn't necessary mean more pollutants! </li>
+					</div>
+				</ul>
+			</div>
+			<br>
+		
+		</div> <!-- end #template (main text) -->
+	</body>
+
+
+	<script>
+
+		/* exercise: using jQuery to modify existing (pre-Jared) DOM, as written in HTML
+		   
+		   Jared-inspired modifications: 
+		   		
+		   		GOAL: to clarify "motivations" for why the audience should be interested in video content
+				- this means explicitly providing the appropriate background knowledge
+				- example: video one (AQ and visibility) does this for the science, but not for the context. there's no explicit statement about AQ being important in human health. the direct connection between the viewer and the content is assumed to be implied
+				- Jared's suggestion: don't assume! quickly introduce it!
+			Yeah, ok! Let's make it happen! 
+		*/
+
+
+		//       STEP ONE MODIFICATIONS      //
+
+		// 1. altering bullet one text to isolate contextual motivation from scientific question
+		var $explainMotive = $("#step-one-context");
+		$explainMotive
+			.text("What contextual background should your audience know in order to connect the question and science with their own lives?")
+			.after("<br>");
+
+		var $motivation = $("<li>");
+		$motivation
+			.text("Introduce the context")
+			.addClass("bold-bullet")
+			.prependTo("#step-one-context");
+
+		// 2. creating a new bullet element for the misconception
+		var $explainQuestion = $("#step-one-misconcept");
+		$explainQuestion
+			.text("Explicitly state it.")
+			.after("<br>");
+
+		var $question = $("<li>");
+		$question
+			.text("Introduce the misconception")
+			.addClass("bold-bullet")
+			.prependTo("#step-one-misconcept");
+		
+		// 3. creating a new bullet to challenge the misconception
+		var $explainChallenge = $("<li>");
+		$explainChallenge
+			.text("Question the misconception. Can we explain its basis with fundamentals? This is our transition into the bam-woah-awesome science!")
+			.appendTo("#step-one-points")
+			.attr("id","step-one-challenge")
+			.after("<br>");
+
+		var $challenge = $("<li>");
+		$challenge
+			.text("Challenge: is this statement true?")
+			.addClass("bold-bullet")
+			.prependTo("#step-one-challenge");
+
+		// 4. step one example
+		var $exContext = $("#ex-context");
+		$exContext
+			.text("Poor air quality has negative health implications");
+
+		var $exChallenge = $("#ex-challenge");
+		$exChallenge
+			.text("Is a smoggier sky more polluted than a clear one?");
+
+
+
+		//       STEP TWO MODIFICATIONS       //
+
+		// 1. Add descriptions to each bullet tagline
+		
+		/*$( "ul.step-two-points" ).children()
+			.addClass("bold-bullet");*/
+
+		var $explainScience = $("#step-two-science");
+		$explainScience
+			.text("Describe the fundamentals, using terms that directly reference the question posed by the misconception/assumption.")
+			.after("<br>");
+
+		var $science = $("<li>");
+		$science
+			.text("Introduce the science")
+			.addClass("bold-bullet")
+			.prependTo("#step-two-science");
+
+		// step two, bullet two
+		var $explainTip = $("#step-two-tip");
+		$explainTip
+			.text("Limit your description to what is minimally necessary to understand #3. In fact, each piece of information should focus directly on answering the exact question. Additional or undirected frillies distract from the main purpose!")
+			.after("<br>");
+
+		var $tip = $("<li>");
+		$tip
+			.text("Streamline your explanation")
+			.addClass("bold-bullet")
+			.prependTo("#step-two-tip");
+
+
+		// step three, bullet one
+		var $explainReconnect = $("#step-three-reconnect");
+		$explainReconnect
+			.text("Transition back to our initial context and example -- the misconception.")
+			.after("<br>");
+
+		var $tieBack = $("<li>");
+		$tieBack
+			.text("Return to the motivating question")
+			.addClass("bold-bullet")
+			.prependTo("#step-three-reconnect");
+
+		// step three, bullet two
+		var $explainApplication = $("#step-three-apply");
+		$explainApplication
+			.text("Synthesize the freshly discussed fundamentals to tie it all together. There should be a clear sentence that directly answers the question we had set-out to investigate!")
+			.after("<br>");
+
+		var $tieBack = $("<li>");
+		$tieBack
+			.text("Apply new knowledge to pre-existing question")
+			.addClass("bold-bullet")
+			.prependTo("#step-three-apply");
+
+	</script>
+
+</html>
